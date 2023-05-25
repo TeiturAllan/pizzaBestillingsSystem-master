@@ -1,0 +1,28 @@
+1. implement create user and login functionality.
+1.1 Ingi wants the following data to be registered when creating a user. Name, Email, Telephone number, street name and street number of home address, Town, birthdate and gender.
+1.2. all of these data points are collected so that Ingi can track eating habits of different customer segments. 
+1.2.1 the data must of course be encrypted so that no unwanted people can used them if accessed. 
+1.2.2 there is probably going to have to be a pretty convincing reason for users to input all of these datas.
+
+2. create functionality that allows customers to place orders.
+2.1 make it possible to order while logged in and while being logged out. make sure that the items placed into the before logging in remain in the cart after logging in.
+2.2 make it possible to order take out and delivery
+2.2.1 delivery must be limited to certain addresses. For this particular application the addresses must be limited to addresses in Tórshavn, Argir, Hoyvík and Hvítanes.
+2.3 create a variable named estimated time til finish. this variable should be displayed placing and order, and should be changable by the on duty shift manager. 
+the variable is used to create a deadline for the each order.
+2.3.1 Ingi (owner and CEO of Pizza 67) wants some kind of indicator to flash when an order is nearing it's deadline
+2.3.2 Ingi eventually wants this variable to be changable by itself by. They way this could work is by inputting an estimated production capacity (E.g. 75 pizzas an hour), and then the system
+would work out and estimated finish time based on how many pizzas are in the current pipeline. 
+
+3. make it possible for staff to see active orders
+3.1 make it possible to filter order by category (take out and delivery)
+
+4. make it possible for customers to see a status bar for their order, this could be achieved by having cooks press a button when they are finished with each order.
+4.1 make it possible for customers to see where the car with their pizza is. 
+4.1.1 this is way down the road, but is possible to having trackers in each car, having each driver register themselves to each car when showing up to work. And then when the drivers leave
+to delivery the pizzas, then they must register which orders they on that delivery trip. and then the customers can see the cars position based on which driver the order is registered to
+and which car the deliverydriver is register to.
+
+5. make it possible for customers who are registered to get special offers compared to non-user customers. 
+
+6. if possible then the frontend should be accessible in English, Danish and Faroese with Faroese being standard. 

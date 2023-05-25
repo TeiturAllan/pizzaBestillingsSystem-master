@@ -1,0 +1,77 @@
+[
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : true,
+        "menuItemNumber" : 60,
+        "menuItemName" : "Barnaburgari",
+        "menuItemDescription" : "Burger with beef, and burger sauce or ketchup",
+        "menuItemIngredients" : {
+            "burgerSauce" : 0,
+            "ketchup" : 0,
+            "beef" : 1
+        },
+        "comment" : "Kids Burgers come with a serving of Fries and cocktail sauce",
+        "price" : [{
+            "price" : 69    
+        }]
+    },
+    {   
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : true,
+        "menuItemNumber" : 62,
+        "menuItemName" : "Nemo",
+        "menuItemDescription" : "Small pizza with Tomato Sauce & Cheese",
+        "menuItemIngredients" : {
+            "tomatoSauce" : 1,
+            "cheese" : 1
+        },
+        "price" : [{
+            "small" : 69    
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : true,
+        "menuItemNumber" : 63,
+        "menuItemName" : "Batman",
+        "menuItemDescription" : "Small pizza with Tomato Sauce, Cheese & Beef",
+        "menuItemIngredients" : {
+            "tomatoSauce" : 1,
+            "cheese" : 1,
+            "beef" : 1
+        },
+        "price" : [{
+            "small" : 69    
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : true,
+        "menuItemNumber" : 64,
+        "menuItemName" : "Superman",
+        "menuItemDescription" : "Small pizza with Tomato Sauce, Cheese & Pepperoni",
+        "menuItemIngredients" : {
+            "tomatoSauce" : 1,
+            "cheese" : 1,
+            "pepperoni" : 1
+        },
+        "price" : [{
+            "small" : 69    
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : true,
+        "menuItemNumber" : 65,
+        "menuItemName" : "Barbie",
+        "menuItemDescription" : "Small pizza with Tomato Sauce, Cheese & Ham",
+        "menuItemIngredients" : {
+            "tomatoSauce" : 1,
+            "cheese" : 1,
+            "ham" : 1
+        },
+        "price" : [{
+            "small" : 69    
+        }]
+    }
+]

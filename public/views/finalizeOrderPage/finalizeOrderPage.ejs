@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/finalizeOrder.css">
+</head>
+<body>
+    <h1>finalize order page</h1>
+
+
+
+
+
+
+<div id="orderInformationWrapper" class="orderInformationWrapper">
+    <form action="/placeOrder/finalizeOrder" method="post">
+
+    <div id="leftdivWrapper" class="leftdivWrapper">
+    <% if(user.email === undefined){ %>
+        
+        <div id="customerContactInfo" class="customerContactInfo">
+            <h3>Customer Information</h3>
+            <label for="">Full name:*</label>
+            <br>
+            <input type="text" id="customerName" name="customerName" value="" required>
+            <br>
+            <label for="">Email:*</label>
+            <br>
+            <input type="text" id="email" name="email" value="" required>
+            <br>
+            <label for="">Telephone Number:*</label>
+            <br>
+            <input type="text" id="telephoneNumber" name="telephoneNumber" value="" required>
+        </div>
+        <div id="orderDeliveryInfo" hidden>
+            <h3>Delivery Address</h3>
+            <br>
+            <label for="">Streetname: *</label>
+            <br>
+            <input type="text" id="streetName" name="streetName" value="" required>
+            <br>
+            <label for="">House Number: *</label>
+            <br>
+            <input type="text" id="houseNumber" name="houseNumber" value="" required>
+            <br>
+            <label for="">Apartment:</label>
+            <br>
+            <input type="text" id="apartment" name="apartment" value="">
+            <br>
+            <label for="">Comment:</label>
+            <br>
+            <input type="text" id="comment" name="comment" value="">
+        </div>
+    <% } %>
+
+
+    
+    <% if(user.email !== undefined){ %>
+        <div>
+            <h3>Customer Information</h3>
+            <label for="">Full name:*</label>
+            <br>
+            <input type="text" id="customerName" name="customerName" value="<%= user.customerName %>" required>
+            <br>
+            <label for="">Email:*</label>
+            <br>
+            <input type="text" id="email" name="email" value="<%= user.email %>" required>
+            <br>
+            <label for="">Telephone Number:*</label>
+            <br>
+            <input type="text" id="telephoneNumber" name="telephoneNumber" value="<%= user.telephoneNumber %>" required>
+        </div>
+        
+        <div id="orderDeliveryInfo" hidden>
+            <h3>Delivery Address</h3>
+            <br>
+            <label for="">Streetname: *</label>
+            <br>
+            <input type="text" id="streetName" name="streetName" value="<%= user.streetName %>" required>
+            <br>
+            <label for="">House Number: *</label>
+            <br>
+            <input type="text" id="houseNumber" name="houseNumber" value="<%= user.houseNumber %>" required>
+            <br>
+            <label for="">Apartment:</label>
+            <br>
+            <input type="text" id="apartment" name="apartment" value="">
+            <br>
+            <label for="">Comment:</label>
+            <br>
+            <input type="text" id="comment" name="comment" value="">
+        </div>
+    <% } %>
+    </div>
+    
+    <div id="centralDivWrapper" class="centralDivWrapper">
+        <div id="orderTypeWrapperTakeAway" class="orderTypeWrapper">
+            <h3>Order Type</h3>
+            <input onclick="determineDeliveryOrTakeAway('delivery')" type="radio" id="orderForDelivery" name="deliveryOrTakeAway" value="delivery" required><label for="">Delivery</label>
+            <br>
+            <input onclick="determineDeliveryOrTakeAway('takeAway')" type="radio" id="orderFortakeAway" name="deliveryOrTakeAway" value="takeAway"><label for="">Take Away</label>
+            <br>
+        </div>
+
+        <div id="orderDeadlineWrapper">
+            <h3>Choose order deadline</h3>
+            <br>
+            <input type="radio" name="orderDeadline" id="" required value="ASAP"><label> As soon as possible</label>
+            <br>
+            <input type="radio" name="orderDeadline" id=""><label> Choose time: (not implemented yet)</label>
+
+        </div>
+    </div>
+
+    <div id="rightDivWrapper">
+        <div id="orderContentWrapper">
+            <h3>Cart overview</h3>
+            <hr>
+            <% orderCart.forEach(orderItem => { %>
+                <% if(orderItem.pizzaSize !== undefined){ %>
+                    <p><%= orderItem.menuItemNumber %>. <%= orderItem.menuItemName %> <%= orderItem.pizzaSize %></p>
+                    <p>
+                    <% for(let i = 0; i < orderItem.ingredientsList.length; i++){ %>
+                        
+                        - <%= orderItem.ingredientsList[i].ingredient %> x<%= orderItem.ingredientsList[i].amount%>
+                        <br>
+                    <% } %>
+                    </p>
+                    <p>price pr pizza: <%= orderItem.pricePrPizza %>Kr.
+                    <br>
+                    Quantity: <%= orderItem.quantity %></p>
+                <% } %>
+                <% if(orderItem.pizzaSize === undefined){ %>
+                    <p><%= orderItem.menuItemNumber %>. <%= orderItem.menuItemName %></p>
+                    <p>
+                    <% for(let i = 0; i < orderItem.ingredientsList.length; i++){ %>
+                        
+                        - <%= orderItem.ingredientsList[i].ingredient %> x<%= orderItem.ingredientsList[i].amount%>
+                        <br>
+                    <% } %>
+                    </p>
+                    <p>price pr burger: <%= orderItem.pricePrBurger %>Kr.
+                        <br>
+                        Quantity: <%= orderItem.quantity %></p>
+                <% } %>
+                
+                <hr>
+            <% }) %>
+        </div>
+        <input id="orderPriceTotal" value="<%= originalPriceTotal %>">
+        <br>
+        <button type="submit">submit</button>
+    </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="../../frontEndJavaScript/finalizeOrder.js">
+     
+</script>
+</html>

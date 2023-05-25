@@ -1,0 +1,32 @@
+html{
+    background: url("../images/test1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow:auto;
+}
+#orderInformationWrapper{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+#leftdivWrapper{
+    float: left;
+    background-image: url("../images/cardboard-background.jpg");
+    width: 30%;
+    
+}
+
+#centralDivWrapper{
+    float: left;
+    background-image: url("../images/cardboard-background.jpg");
+    width: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#rightDivWrapper{
+    float: left;
+    background-image: url("../images/cardboard-background.jpg");
+    width: 30%;
+    
+}

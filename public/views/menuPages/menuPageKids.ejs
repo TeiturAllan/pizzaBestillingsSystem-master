@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/menu.css" />
+    
+</head>
+<%- include("../common/header.ejs") %>
+<body>
+    <a href="/menu/pizza">Pizzas</a> <a href="/menu/burger">Burgers</a> <a href="/menu/kids">Kids Menu</a>
+    <div id="menuAndCartWrapper">
+        <div id="orderCart">
+            <h3 id="orderCartTitle">Cart</h6>
+                <hr>
+            <h4>Pizzas:</h4>
+            <% for(let i = 0; i < orderCart.length; i++){ %>
+                <% if(orderCart[i].pizzaSize !== undefined){ %>
+                    <p><%= orderCart[i].quantity %>x<%= orderCart[i].menuItemName %> - Size: <%= orderCart[i].pizzaSize %></p>
+                    <p>
+                    <% orderCart[i].ingredientsList.forEach(element => { %>
+                        - <%= element.ingredient%> x<%= element.amount%>
+                        <br>
+                    <% }) %>
+                    </p>
+                    <p>Price Pr Pizza: <%= orderCart[i].pricePrPizza%>Kr</p>
+                    <% if(orderCart[i].quantity > 1){ %>
+                        <p>Price Total for these pizzas <%= orderCart[i].pricePrPizza * orderCart[i].quantity %>Kr</p>
+                    <% } %>
+                    <form action="/menu/removeFromCart/<%=i%>" method="post">
+                        <button type="submit">remove item from cart</button>
+                    </form>
+                    <br>
+                <% } %>
+            <% } %>
+            <hr>
+            <h4>Burgers:</h4>
+            <% for(let i = 0; i < orderCart.length; i++){ %>
+                <% if(orderCart[i].pizzaSize === undefined){ %>
+                    <p><%= orderCart[i].menuItemNumber %>. <%= orderCart[i].menuItemName %> -  Quantity: <%= orderCart[i].quantity %> Stk.</p>
+                    <% orderCart[i].ingredientsList.forEach(element => { %>
+                        <p>- <%= element.ingredient%> x<%= element.amount%></p>
+                    <% }) %>
+                    <p>Price Pr Burger: <%= orderCart[i].pricePrBurger%>Kr</p>
+                    <form action="/menu/removeFromCart/<%=i%>" method="post">
+                        <button type="submit">remove item from cart</button>
+                    </form>
+                <% } %>
+            <% } %>
+            <hr>
+            <form action="/placeOrder" method="post">
+           
+            <br>
+            <input type="number" readonly id="orderPriceTotal" name="orderPriceTotal" value="<%=orderPriceTotal%>"><label for="">Order Total Price</label>
+            <br>
+            <button type="submit">Place Order</button>
+            </form>
+        </div>
+
+
+        <% let minNumberOfSameIngredient = 0 %>
+        <% let maxNumberOfSameIngredient = 3 %>
+
+        <% menu.forEach(menuItem => { %>
+            
+            <div class="menuItemWrapper">   
+                <div class="menuItem">
+                    <div class="menuItemLeftSideWrapper">
+                        <div class="menuItemTitleWrapper">
+                            <h4 class="menuItemTitle"><%= menuItem.menuItemNumber %>. <%= menuItem.menuItemName %> </h4>
+                        </div>
+                        <div class="ingredientListWrapper">
+                            <div class="ingredientList">
+                                <p><%= menuItem.menuItemDescription %></p>
+                                <% if(menuItem.comment !== undefined){ %>
+                                    <p><%= menuItem.comment %></p>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuItemRightSideWrapper">
+                        <div class="sizeAndPricesWrapper">
+                            <% if(menuItem.menuItemCategory === "pizza" && menuItem.isKidsMenuItem === true) { %>
+                                <div class="sizeIndecatorsWrapperNormalPizza">
+                                    <div class="sizeIndecatorsContentWrapper">
+                                        <p class="sizeIndecators">9"</p>
+                                    </div>
+                                </div>
+                                <div class="pricesWrapperNormalPizzas">
+                                    <div class="pricesContentWrapper">
+                                        <p class="pricelabel"><%= menuItem.price[0].small %>Kr. </p>
+                                    </div>
+                                </div>
+                            <% } %>
+
+                            <% if(menuItem.menuItemCategory === "burger"){ %>
+                                <div class="burgerRedBarFiller">
+                                    <div class="pricesWrapperBurger">
+                                        <div class="pricesContentWrapperBurger">
+                                            <p class="pricelabelBurger"><%= menuItem.price[0].price %>Kr. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            <% } %> 
+                            
+                            <div class="spanWrapper">
+                                <button class="OpenCloseToggleButton" id="openAndCloseFormDivMenuItem<%= menuItem.menuItemNumber %>" onclick="revealOrHideFormDiv('<%=menuItem.menuItemNumber%>')"> 
+                                    +
+                                </button> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="addMenuItemToCartWrapper" id="addMenuItemToCartWrapper<%= menuItem.menuItemNumber %>" hidden="hidden">
+                    <form action="/menu/<%= menuItem.menuItemCategory%>/addItemToCart" method="post">
+                        <% if(menuItem.menuItemCategory === "pizza" && menuItem.isKidsMenuItem === true){ %>
+                            <span class="minus" onclick="removeIngredientKidsMenu(`tomatoSauceCounter.<%=menuItem.menuItemName%>`)">-</span>
+                            <input type="number" name="tomatoSauceCounter" id="tomatoSauceCounter.<%=menuItem.menuItemName%>" class="ingredientInput" min="<%= minNumberOfSameIngredient%>" max="1" value="<%= menuItem.menuItemIngredients.tomatoSauce %>" readonly/>
+                            <span class="plus" onclick="addIngredientKidsMenu(`tomatoSauceCounter.<%=menuItem.menuItemName%>`)">+</span>  <label for="">Tomato Sauce</label>
+                            <br>
+
+                            <span class="minus" onclick="removeIngredientKidsMenu(`cheeseCounter.<%=menuItem.menuItemName%>`)">-</span>
+                            <input type="number" name="cheeseCounter" id="cheeseCounter.<%=menuItem.menuItemName%>" class="ingredientInput" min="<%= minNumberOfSameIngredient%>" max="1" value="<%= menuItem.menuItemIngredients.cheese %>" readonly/>
+                            <span class="plus" onclick="addIngredientKidsMenu(`cheeseCounter.<%=menuItem.menuItemName%>`)">+</span>
+                            <label for="">Cheese</label>
+                            <br>
+
+                            <input type="hidden" id="small" name="pizzaSize" value='9"'>
+                            <% if(menuItem.menuItemIngredients.beef !== undefined && menuItem.menuItemIngredients.beef === 1 ){ %>
+                                <span class="minus" onclick="removeIngredientKidsMenu(`beefCounter.<%=menuItem.menuItemName%>`)">-</span>
+                                <input type="number" name="beefCounter" id="beefCounter.<%=menuItem.menuItemName%>" class="ingredientInput" min="<%= minNumberOfSameIngredient%>" max="1" value="<%= menuItem.menuItemIngredients.beef %>" readonly/>
+                                <span class="plus" onclick="addIngredientKidsMenu(`beefCounter.<%=menuItem.menuItemName%>`)">+</span>
+                                <label for="">Beef</label>
+                                <br>
+                                
+                            <% } %>
+                            <% if(menuItem.menuItemIngredients.pepperoni !== undefined && menuItem.menuItemIngredients.pepperoni === 1 ){ %>
+                                <span class="minus" onclick="removeIngredientKidsMenu(`pepperoniCounter.<%=menuItem.menuItemName%>`)">-</span>
+                                <input type="number" name="pepperoniCounter" id="pepperoniCounter.<%=menuItem.menuItemName%>" class="ingredientInput" min="<%= minNumberOfSameIngredient%>" max="1" value="<%= menuItem.menuItemIngredients.pepperoni %>" readonly/>
+                                <span class="plus" onclick="addIngredientKidsMenu(`pepperoniCounter.<%=menuItem.menuItemName%>`)">+</span>
+                                <label for="">Pepperoni</label>
+                                <br>
+                                
+                            <% } %>
+                            <% if(menuItem.menuItemIngredients.ham !== undefined && menuItem.menuItemIngredients.ham === 1){ %>
+                                <span class="minus" onclick="removeIngredientKidsMenu(`hamCounter.<%=menuItem.menuItemName%>`)">-</span>
+                                <input type="number" name="hamCounter" id="hamCounter.<%=menuItem.menuItemName%>" class="ingredientInput" min="<%= minNumberOfSameIngredient%>" max="1" value="<%= menuItem.menuItemIngredients.ham %>" readonly/>
+                                <span class="plus" onclick="addIngredientKidsMenu(`hamCounter.<%=menuItem.menuItemName%>`)">+</span>
+                                <label for="">Ham</label>
+                                <br>
+                                
+                            <% } %>
+                            <br>
+                            <input type="number" readonly name="pricePrItem" id="price.<%=menuItem.menuItemName%>" value="<%=menuItem.price[0].small %>"> <label>Price Pr. pizza</label>
+                        <% } %>
+                        
+                        <% if(menuItem.menuItemCategory === "burger" && menuItem.isKidsMenuItem === true){ %>
+                            <span class="minus" onclick="removeIngredientKidsMenu(`beefCounterforBurger.<%=menuItem.menuItemName%>`)">-</span>
+                            <input type="number" name="beefCounterforBurger" id="beefCounterforBurger.<%=menuItem.menuItemName%>" class="ingredientInput" min="<%= minNumberOfSameIngredient%>" max="1" value="<%= menuItem.menuItemIngredients.beef %>" readonly/>
+                            <span class="plus" onclick="addIngredientKidsMenu(`beefCounterforBurger.<%=menuItem.menuItemName%>`)">+</span>
+                            <label for="">Beef</label>
+                            <br>
+
+                            <input type="radio" id="small" name="dressing" required value='Ketchup'>
+                            <label for="small">Ketchup</label> <br>
+                            <input type="radio" id="medium" name="dressing" value='burger sauce'>
+                            <label for="small">Burger Sauce</label><br>
+                            <input type="radio" id="large" name="dressing" value='No dressing'>
+                            <label for="small">No dressing/Sauce</label><br>
+                        <% } %>
+
+                            <input type="hidden" id="menuItemCategory" name="menuItemCategory" value="<%= menuItem.menuItemCategory%>" readonly>
+                            <input type="hidden" id="menuItemNumber" name="menuItemNumber" value="<%= menuItem.menuItemNumber%>"readonly>
+                            <input type="hidden" id="menuItemName" name="menuItemName" value="<%= menuItem.menuItemName%>"readonly>
+                            <input type="hidden" id="changeCounter.<%=menuItem.menuItemName%>"  name="changeCounter" value="0" readonly>
+                            
+                            <br>
+                            <span class="minus" onclick="decreaseQuantity(`quantity.<%=menuItem.menuItemName%>`)">-</span><input type="number" name="quantity" id="quantity.<%=menuItem.menuItemName%>" class="ingredientInput" min="0" value="1" readonly /><span class="plus" onclick="increaseQuantity(`quantity.<%=menuItem.menuItemName%>`)">+</span>   <label for="">Quantity</label><br>
+                            
+                        <button type="submit">Add item to cart</button>
+                    </form>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+
+    
+</body>
+<script src="../../frontEndJavaScript/menu.js"></script>
+</html>

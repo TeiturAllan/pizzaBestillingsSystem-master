@@ -1,0 +1,455 @@
+[
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 1,
+        "menuItemName" : "Pepperoni",
+        "menuItemIngredients" : [ 
+            "Cheese", 
+            "Tomato Sauce",
+            "Pepperoni",
+            "Bell Peppers",
+            "Black Pepper"
+        ],
+        "price" : [{     
+            "small" : 75,
+            "medium" : 105,
+            "large" : 149
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 2,
+        "menuItemName" : "Casanova",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Ham",
+            "Bell Peppers",
+            "Pineapple"
+        ],
+        "price" : [{     
+            "small" : 82,
+            "medium" : 105,
+            "large" : 155
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 3,
+        "menuItemName" : "Grønmetispizza",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Mushrooms",
+            "Bell Peppers",
+            "Onions"
+        ],
+        "price" : [{     
+            "small" : 82,
+            "medium" : 105,
+            "large" : 155
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 4,
+        "menuItemName" : "Americana",
+        "menuItemIngredients" : [
+            "Cheese",
+            "Tomato Sauce",
+            "Pepperoni",
+            "Mushrooms",
+            "Tomatoes"
+        ],
+        "price" : [{     
+            "small" : 82,
+            "medium" : 105,
+            "large" : 155
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 5,
+        "menuItemName" : "Hawaii",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Ham",
+            "Pineapple"
+        ],
+        "price" : [{     
+            "small" : 75,
+            "medium" : 105,
+            "large" : 149
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 6,
+        "menuItemName" : "Margherita",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Oregano"
+        ],
+        "price" : [{     
+            "small" : 75,
+            "medium" : 95,
+            "large" : 149
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 7,
+        "menuItemName" : "Bolognese",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Beef",
+            "Mushrooms",
+            "Bell Peppers",
+            "Black Pepper"
+        ],
+        "price" : [{     
+            "small" : 82,
+            "medium" : 105,
+            "large" : 155
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 9,
+        "menuItemName" : "South Pacific",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Ham",
+            "Shrimp",
+            "Mushrooms"
+        ],
+        "price" : [{     
+            "small" : 82,
+            "medium" : 105,
+            "large" : 155
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 10,
+        "menuItemName" : "San Francisco",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Pepperoni",
+            "Onions",
+            "Olives"
+        ],
+        "price" : [{     
+            "small" : 82,
+            "medium" : 105,
+            "large" : 155
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 11,
+        "menuItemName" : "Supreme",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Beef",
+            "Ham",
+            "Pepperoni",
+            "Mushrooms",
+            "Bell Peppers",
+            "Onions",
+            "Pineapple"
+        ],
+        "comment" : "Extra Cheese",
+        "price" : [{     
+            "small" : 87,
+            "medium" : 110,
+            "large" : 165
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 12,
+        "menuItemName" : "Buffét Pepperoni",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Pepperoni"
+        ],
+        "comment" : "Extra Pepperoni and Extra Cheese. All Pepperoni is on top of Cheese",
+        "price" : [{     
+            "small" : 82,
+            "medium" : 105,
+            "large" : 155
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 13,
+        "menuItemName" : "Rolling Stones",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Pepperoni",
+            "Ham",
+            "Beef"
+        ],
+        "price" : [{     
+            "small" : 87,
+            "medium" : 110,
+            "large" : 165
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 14,
+        "menuItemName" : "Flower Power",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Pepperoni",
+            "Pineapple",
+            "Chili Flakes"
+        ],
+        "price" : [{     
+            "small" : 82,
+            "medium" : 105,
+            "large" : 155
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 15,
+        "menuItemName" : "Pepperoni 67",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Chili Flakes",
+            "Pepperoni"
+            
+        ],
+        "comment" : "Extra Pepperoni and Extra Cheese",
+        "price" : [{     
+            "small" : 87,
+            "medium" : 110,
+            "large" : 165
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 16,
+        "menuItemName" : "Crazy Bananas",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Pepperoni",
+            "Banana"
+        ],
+        "price" : [{     
+            "small" : 82,
+            "medium" : 105,
+            "large" : 149
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 17,
+        "menuItemName" : "Woodstock",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Ham",
+            "Pineapple",
+            "Banana"
+        ],
+        "price" : [{     
+            "small" : 82,
+            "medium" : 105,
+            "large" : 155
+        }]
+    },
+    {    
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 18,
+        "menuItemName" : "SGT. Pepper's",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Pepperoni",
+            "Mushrooms",
+            "Onions",
+            "Black Pepper",
+            "Chili Flakes"
+        ],
+        "price" : [{     
+            "small" : 87,
+            "medium" : 110,
+            "large" : 165
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 19,
+        "menuItemName" : "TNT",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Pepperoni",
+            "Mushrooms",
+            "Pineapple",
+            "Tabasco",
+            "Chili Flakes",
+            "Black Pepper",
+            "Jalapeños"
+        ],
+        "price" : [{     
+            "small" : 87,
+            "medium" : 110,
+            "large" : 165
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 20,
+        "menuItemName" : "Meat Feast",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Pepperoni",
+            "Ham",
+            "Beef",
+            "Bacon",
+            "Chicken"
+        ],
+        "price" : [{     
+            "small" : 87,
+            "medium" : 110,
+            "large" : 165
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 21,
+        "menuItemName" : "Bossanova",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Ham",
+            "Pineapple",
+            "Jalapeños",
+            "Black Pepper"
+        ],
+        "price" : [{     
+            "small" : 82,
+            "medium" : 105,
+            "large" : 155
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 22,
+        "menuItemName" : "Rolant'sa Pizza",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Ham",
+            "Mushrooms",
+            "Pepperoni",
+            "Black Pepper"
+            
+        ],
+        "comment" : "All Toppings are on top of Cheese",
+        "price" : [{     
+            "small" : 87,
+            "medium" : 110,
+            "large" : 165
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 23,
+        "menuItemName" : "Jeggy's Special",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Beef",
+            "Ham",
+            "Pepperoni",
+            "Mushrooms",
+            "Bell Peppers",
+            "Onions",
+            "Shrimp",
+            "Chili Flakes",
+            "Black Pepper"
+        ],
+        "comment" : "Extra Cheese",
+        "price" : [{     
+            "small" : 87,
+            "medium" : 110,
+            "large" : 165
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 24,
+        "menuItemName" : "BBQ Chicken",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Onions",
+            "BBQ sauce",
+            "Chicken"
+        ],
+        "price" : [{     
+            "small" : 82,
+            "medium" : 105,
+            "large" : 155
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 25,
+        "menuItemName" : "Champions",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Bacon",
+            "Chicken",
+            "Egg"
+        ],
+        "price" : [{     
+            "small" : 87,
+            "medium" : 110,
+            "large" : 165
+        }]
+    }
+]

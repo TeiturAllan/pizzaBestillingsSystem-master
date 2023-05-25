@@ -1,0 +1,17 @@
+BUGS:
+- BBQ is writen as "Bbq Sauce" when shown in the order cart. probably an error that derives from a ReGex error when adding menuItem with ingredient to cart
+- Thousand Island dressing when shown in the order cart is written as 'Thousand I,Dsland I,Dressing' Probably an errir that derives from ReGex similar to the BBQ sauce error
+- tabasco is not currently implemented as an ingredient on the menuPage when adding items.  
+
+necessary fix to reach roadmap target:
+- somehow register the changes made on each menuItem when placing in cart, so that the orderCart looks cleaner(on the front end)
+- currently the price changes when you remove a standard ingredient (if you have added another ingredient first). this needs to be fixed, so that the price does not change when
+removing a standard ingredient.
+- the current changeCounter system to see if the item has been edited, works but it also needs to take account for 
+- somehow implement the commented values into the current ingredient amount numbering system (e.g. extra cheese should be cheese 2x)
+a possible solution is to use regex, to increase the counter by 2 instead of 1 when the word "extra" is in front of the word.
+- make it possible to add dressing to a pizza, if the customer wishes dressing on top of their pizza.
+- the current express-session method is fine for testing, but is not designed for a production environment, as it is memory based and can lead to memory leaks. 
+Acedemind has created a similar project, and uses a session storage solution. Link: https://www.youtube.com/watch?v=g32awc4HrLA&ab_channel=Academind
+
+nice to have after the ordering process is fully implemented.

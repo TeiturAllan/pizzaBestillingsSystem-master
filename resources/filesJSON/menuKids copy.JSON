@@ -1,0 +1,71 @@
+[
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : true,
+        "menuItemNumber" : 60,
+        "menuItemName" : "Barnaburgari",
+        "menuItemIngredients" : [ 
+            "Beef",
+            "Ketchup or Burger Sauce"
+        ],
+        "comment" : "Kids Burgers come with a serving of Fries and cocktail sauce",
+        "price" : [{
+            "price" : 69    
+        }]
+    },
+    {   
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : true,
+        "menuItemNumber" : 62,
+        "menuItemName" : "Nemo",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce"
+        ],
+        "price" : [{
+            "small" : 69    
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : true,
+        "menuItemNumber" : 63,
+        "menuItemName" : "Batman",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Beef"
+        ],
+        "price" : [{
+            "small" : 69    
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : true,
+        "menuItemNumber" : 64,
+        "menuItemName" : "Superman",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Pepperoni"
+        ],
+        "price" : [{
+            "small" : 69    
+        }]
+    },
+    {
+        "menuItemCategory" : "pizza",
+        "isKidsMenuItem" : true,
+        "menuItemNumber" : 65,
+        "menuItemName" : "Barbie",
+        "menuItemIngredients" : [ 
+            "Cheese",
+            "Tomato Sauce",
+            "Ham"
+        ],
+        "price" : [{
+            "small" : 69    
+        }]
+    }
+]

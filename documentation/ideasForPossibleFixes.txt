@@ -1,0 +1,4 @@
+to fix the order cart problem, i can use an empty array (within a script tag) on an HTML file, as that file is loaded on to each client and is therefor client specific
+which means that there is no risk of two clients seeing the same order. E.g. if client A adds a pizza to his cart, it will not be added to client B's cart. 
+
+to make this cart persistent i can try to add the cart 

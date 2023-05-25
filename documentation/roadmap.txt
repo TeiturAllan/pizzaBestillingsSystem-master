@@ -1,0 +1,1 @@
+add change counters to each ingredient and change the related functions, so that the user can't increase one ingredient and lower an other to manipulate the prices.

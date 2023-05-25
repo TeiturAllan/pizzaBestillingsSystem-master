@@ -1,0 +1,50 @@
+
+<header>
+    <div id="headerNavigationBar">
+        <img src="../../images/logo.png" id="logoImage">
+        <a class="headerNavigationButton" href="/menu">Menu</a>
+
+            <% if(user.email !== undefined){ %>
+                <a class="headerNavigationButton" id="userIsSignedInDropDownMenu">You are signed in</a> 
+            <% } else { %>
+                <a class="headerNavigationButton" id="userIsSignedInDropDownMenu" href="/login">You are not signed in, click here to sign in</a>
+            <% } %>
+              
+        
+    </div>
+</header>
+<style>
+   
+    #headerNavigationBar{
+    height: 3em;
+    background-image: url("../../images/cardboard-background.jpg");
+    overflow: hidden;
+
+    }
+
+    #logoImage{
+        float: left;
+        margin-left: 1em;
+        height: 100%;
+        
+    }
+    .headerNavigationButton{
+        float: left;
+        color: azure;
+        text-align: center;
+        padding: 0.8em 1em;
+        text-decoration: none;
+    }
+
+    .headerNavigationButton:hover{
+        background-color: #ddd;
+        color: black;
+    }
+
+    #userIsSignedInDropDownMenu{
+        position: absolute;
+        right: 0;
+    }
+
+    
+</style>

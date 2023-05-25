@@ -1,0 +1,128 @@
+html{
+    background-color: black;
+}
+
+h1{
+    color: aliceblue;
+}
+a{
+    color: aliceblue;
+}
+
+.orderQueueWrapper{
+    position: absolute;
+    margin-left: 2%;
+    background-color: brown;
+    float: left;
+    width: 20%;
+    height: 100%;
+    overflow: auto;
+}
+
+    .orderInOrderQueue{
+        background-color: white;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+        .amountOfMenuItem{
+            margin: 0%;
+        }
+
+        .orderOwnerName{
+            margin: 0%;
+        }
+
+
+.DetailedOrderWrapper{
+    margin-left: 25%;
+}
+.SingleOrderWrapper{
+    position: relative;
+    background-color: white;
+    width: 35%;
+    margin-left: 5%;
+    float: left;
+    margin-bottom: 5%;
+}
+
+    .customerInformation{
+        width: 100%;
+        height: 3em;
+    }
+        .customerInformationLeftDiv{
+            float: left;
+            width: 50%;
+            height: 100%;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+            .orderNumber{
+                float: left;
+                width: 45%;
+                margin: 0%;
+            }
+            .orderDate{
+                float: right;
+                width: 45%;
+                margin: 0;
+            }
+
+            .orderDeadline{
+                float: left;
+                width: 100%;
+                margin: 0%;
+            }
+
+        .customerInformationRightDiv{
+            margin: 0%;
+            float: right;
+            width: 50%;
+            height: 100%;
+            
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+            .customerName{
+                margin: 0%;
+            }
+
+            .customerTelephoneNumber{
+                margin: 0%;
+            }
+
+            
+    .lineWrapper{
+        width: 100%;
+    }
+
+    .orderItemsWrapper{
+        width: 100%;
+        height: 20em;
+    }
+
+        .OrderItemLeftSide{
+            float: left;
+            width: 50%;
+        }
+
+        .OrderItemRightSide{
+            float: right;
+            width: 50%;
+        }
+
+    .orderFooter{
+        width: 100%;
+        height: 3em;
+    }
+
+        .orderTotalPriceLabel{
+            float: left
+        }
+        button{
+            float: right;
+        }

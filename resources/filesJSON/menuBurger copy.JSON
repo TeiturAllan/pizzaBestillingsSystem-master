@@ -1,0 +1,226 @@
+[
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 50,
+        "menuItemName" : "Honey Mustard Chicken",
+        "menuItemIngredients" : [ 
+            "Chicken",
+            "Burger Sauce",
+            "Ham",
+            "Cheese"
+        ],
+        "comment" : "All Burgers Come With A serving Of Fries",
+        "price" : [{
+            "price" : 109    
+        }]
+    },
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 51,
+        "menuItemName" : "Cheesy Chicken",
+        "menuItemIngredients" : [ 
+            "Chicken",
+            "Burger Sauce",
+            "Lettuce",
+            "Tomato",
+            "extra, extra Cheese"
+        ],
+        "comment" : "All Burgers Come With A serving Of Fries",
+        "price" : [{
+            "price" : 109    
+        }]
+    },
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 52,
+        "menuItemName" : "Juicy Lucy",
+        "menuItemIngredients" : [ 
+            "Chicken",
+            "Burger Sauce",
+            "Lettuce",
+            "Bacon",
+            "extra, extra Cheese"
+        ],
+        "comment" : "All Burgers Come With A serving Of Fries",
+        "price" : [{
+            "price" : 109    
+        }]
+    },
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 53,
+        "menuItemName" : "Red Hot Chili Chicken",
+        "menuItemIngredients" : [ 
+            "Chicken",
+            "Burger Sauce",
+            "Lettuce",
+            "Jalapeños",
+            "Chili Sauce,"
+        ],
+        "comment" : "All Burgers Come With A serving Of Fries",
+        "price" : [{
+            "price" : 109    
+        }]
+    },
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 70,
+        "menuItemName" : "Staying Alive",
+        "menuItemIngredients" : [ 
+            "Beef",
+            "Burger Sauce",
+            "Lettuce",
+            "Tomato"
+        ],
+        "comment" : "All Burgers Come With A serving Of Fries",
+        "price" : [{
+            "price" : 109    
+        }]
+    },
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 71,
+        "menuItemName" : "Fleskaburgari",
+        "menuItemIngredients" : [ 
+            "Beef",
+            "Burger Sauce",
+            "Lettuce",
+            "Tomato",
+            "Bacon"
+        ],
+        "comment" : "All Burgers Come With A serving Of Fries",
+        "price" : [{
+            "price" : 109    
+        }]
+    },
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 72,
+        "menuItemName" : "BBQ Burgari",
+        "menuItemIngredients" : [ 
+            "Beef",
+            "Burger Sauce",
+            "Lettuce",
+            "Tomato",
+            "BBQ sauce,"
+        ],
+        "comment" : "All Burgers Come With A serving Of Fries",
+        "price" : [{
+            "price" : 109    
+        }]
+    },
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 73,
+        "menuItemName" : "High on 67",
+        "menuItemIngredients" : [ 
+            "Beef",
+            "Burger Sauce",
+            "Lettuce",
+            "Cheese",
+            "Bacon",
+            "Pineapple"
+        ],
+        "comment" : "All Burgers Come With A serving Of Fries",
+        "price" : [{
+            "price" : 109    
+        }]
+    },
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 74,
+        "menuItemName" : "American Style",
+        "menuItemIngredients" : [ 
+            "Beef",
+            "Burger Sauce",
+            "Lettuce",
+            "Cucumber",
+            "Bell Peppers",
+            "Onions"
+        ],
+        "comment" : "All Burgers Come With A serving Of Fries",
+        "price" : [{
+            "price" : 109    
+        }]
+    },
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 75,
+        "menuItemName" : "Ostaburgari",
+        "menuItemIngredients" : [ 
+            "Beef",
+            "Burger Sauce",
+            "Lettuce",
+            "Tomato",
+            "Cheese"
+        ],
+        "comment" : "All Burgers Come With A serving Of Fries",
+        "price" : [{
+            "price" : 109    
+        }]
+    },
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 76,
+        "menuItemName" : "Rockburgari",
+        "menuItemIngredients" : [ 
+            "Beef",
+            "Burger Sauce",
+            "Lettuce",
+            "Bacon",
+            "Egg"
+        ],
+        "comment" : "All Burgers Come With A serving Of Fries",
+        "price" : [{
+            "price" : 109    
+        }]
+    },
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 77,
+        "menuItemName" : "Chiliburgari",
+        "menuItemIngredients" : [ 
+            "Beef",
+            "Burger Sauce",
+            "Lettuce",
+            "Pineapple",
+            "Jalapeños",
+            "Chili Sauce"
+        ],
+        "comment" : "All Burgers Come With A serving Of Fries",
+        "price" : [{
+            "price" : 109    
+        }]
+    },
+    {
+        "menuItemCategory" : "burger",
+        "isKidsMenuItem" : false,
+        "menuItemNumber" : 79,
+        "menuItemName" : "Klubb Burgari",
+        "menuItemIngredients" : [ 
+            "Beef",
+            "Burger Sauce",
+            "Lettuce",
+            "Ham",
+            "Mushrooms",
+            "Cheese"
+        ],
+        "comment" : "All Burgers Come With A serving Of Fries",
+        "price" : [{
+            "price" : 109    
+        }]
+        
+    }
+]

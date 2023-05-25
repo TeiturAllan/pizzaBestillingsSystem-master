@@ -1,0 +1,8 @@
+the menu.ejs file can seem a little daunting at first however the structure of the file
+is rather simple.
+the first 200 lines are pure ejs (embeded JavaScript) that is used to determine the
+values that are to input in the the different HTML tags; the rest of the file is pretty straight forward HTML and CSS. 
+this is done with a large forEach loop that loops through each of menu items defined in the menu JSON files (menuBurger.JSON, menuKids.JSON and menuPizza.JSON).
+this forEach loop goes through each of the attributes of each of the objects (menu items) and uses them to assign the relevant values.
+An example not every pizza has beef on it and therefor the input tag for beef should only be 1 (meaning 1 portion of beef, if the customer wants extra or no beef then he/she can click on
+the + or - span) when the pizza is supposed to have beef on it, and it should be 0 when there is not supposed to be any beef on the pizza.
